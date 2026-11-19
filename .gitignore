@@ -1,2 +1,5 @@
 .obsidian/workspace*.json
 .trash/
+.venv/
+__pycache__/
+*.py[cod]

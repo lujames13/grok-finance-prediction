@@ -15,17 +15,41 @@ James 的 Obsidian vault：每筆股票預測一張筆記，用來追蹤推論�
 ## 目錄結構
 
 ```
-Home.md                 # Dataview 首頁：未到期、已計分、命中率
+Home.md                     # Dataview 首頁：未到期、已計分、命中率
 README.md
-Templates/Prediction.md # 新預測筆記範本
-Predictions/            # 一筆預測一張筆記
+Templates/Prediction.md     # 新預測筆記範本
+Predictions/                # 一筆預測一張筆記
   <id> <ticker> <name>.md
+data/
+  predictions.csv           # 預測總表（資料來源）
+  notes/<id>.json           # 可選 sidecar（新聞連結、檢討）
+scripts/
+  sync_vault.py             # 把 CSV 同步成筆記，並可 commit / push
+  fetch_prices.py           # 從 Yahoo Finance 拉近期收盤價
+  prediction_i18n.json      # 既有 23 筆的繁中正文
+pyproject.toml              # uv 專案與依賴
+uv.lock
+.python-version             # 固定 Python 3.13
 .gitignore
 ```
 
-筆記檔名範例：`20261119-PM-2 3017.TW 奇鋐.md`。
+筆記檔名範例：`20261119-PM-2 3017.TW 奇鋐.md`。`data/` 與 `scripts/` 可以留在 vault 裡，不會當成筆記。工作區檔與 Python 虛擬環境已寫進 `.gitignore`（`.obsidian/workspace*.json`、`.trash/`、`.venv/`、`__pycache__/`）。
 
-資料來源是 box 上的 `/workspace/finance/predictions.csv`。同步腳本是 `/workspace/finance/sync_vault.py`：會補上缺的筆記；已存在的筆記只更新計分相關的 frontmatter，以及 `## 結果與檢討`，其餘內文（含後來補上的新聞連結）會保留。
+## 開發環境（uv）
+
+套件與 Python 版本用 [uv](https://docs.astral.sh/uv/) 管理，不要用系統 pip。
+
+```bash
+# 若尚未安裝 uv
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+cd /workspace/grok-finance-prediction
+uv sync                          # 依 uv.lock 建立 .venv 並安裝依賴（目前是 PyYAML）
+uv run scripts/sync_vault.py --help
+uv run scripts/fetch_prices.py --help
+```
+
+`.python-version` 固定為 3.13。新增依賴請用 `uv add <package>`，再把 `pyproject.toml` 與 `uv.lock` 一起提交。
 
 ## 計分規則
 
@@ -86,24 +110,39 @@ Predictions/            # 一筆預測一張筆記
 
 ## 同步腳本
 
+標準指令（請日常 routine 改用這組）：
+
 ```bash
-# 預覽並寫入筆記，但不 push
-python3 /workspace/finance/sync_vault.py --no-push
+cd /workspace/grok-finance-prediction
+
+# 寫入筆記；有變更就 commit，但不 push
+uv run scripts/sync_vault.py --no-push
 
 # 有變更就 commit，並 push 到 origin/main
 # 需要環境變數 GH_FINANCE_PAT（fine-grained PAT）
-python3 /workspace/finance/sync_vault.py
+uv run scripts/sync_vault.py
 ```
 
-可選參數：`--csv PATH`、`--vault PATH`、`--sidecar-dir PATH`。
+可選參數：`--csv PATH`、`--vault PATH`、`--sidecar-dir PATH`。預設讀 `data/predictions.csv` 與 `data/notes/`，vault 就是這個 repo 根目錄。
 
 腳本是冪等的（idempotent）：連續跑兩次，第二次不應再改檔。Commit message 格式：`predictions: sync YYYY-MM-DD HH:MM`（Asia/Taipei）。
+
+相容路徑：`python3 /workspace/finance/sync_vault.py` 仍可用，它是一個薄包裝，會轉去執行上面的 `uv run` 指令。`/workspace/finance/predictions.csv` 與 `/workspace/finance/notes` 是指向 repo 裡 `data/` 的符號連結。
+
+查價：
+
+```bash
+cd /workspace/grok-finance-prediction
+uv run scripts/fetch_prices.py                 # 預設觀察清單
+uv run scripts/fetch_prices.py --from-csv      # 加上 predictions.csv 裡的代號與基準
+uv run scripts/fetch_prices.py NVDA 2330.TW
+```
 
 ### Sidecar JSON
 
 若要替某筆預測補新聞連結、額外數字或計分檢討，放一個檔在：
 
-`/workspace/finance/notes/<id>.json`
+`data/notes/<id>.json`
 
 ```json
 {
