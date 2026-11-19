@@ -1,0 +1,60 @@
+---
+id: 20261116-PM-2
+ticker: CRWV
+name: CoreWeave
+market: US
+direction: down
+confidence: low-medium
+horizon: 5
+made_at: 2026-11-16
+session: PM
+due_date: 2026-11-20
+ref_price: 53.13
+benchmark: QQQ
+benchmark_ref: 679.89
+reasoning_type: counterparty
+status: open
+result:
+exit_price:
+benchmark_exit:
+stock_return:
+excess_return:
+scored_at:
+tags:
+- prediction
+- conf/low-medium
+- pred/open
+- market/us
+- dir/down
+- reason/counterparty
+---
+
+## 預測
+
+預測CoreWeave（CRWV）在 5 個交易日內表現輸 QQQ（信心：中低）。
+
+## 數值依據
+
+- 參考價：53.13（收盤 2026-11-13）
+- 基準：QQQ 參考價 679.89（收盤 2026-11-13）
+- 預測建立：2026-11-16 14:00（PM）
+- 到期日：2026-11-20
+- 預測期間：5 個交易日
+
+## 推論理由
+
+《WSJ》報導，代理執行長 Kress 正在收緊 NVDA 對 AI 雲端業者的融資／擔保承諾。依賴 NVDA 相關融資、且資本支出對利率敏感的 neocloud，是最直接的對手方（counterparty）；10 年期美債殖利率高於 5%，也會加重資金壓力。
+
+## 觸發新聞
+
+《WSJ》11/13–16 報導 NVDA 收緊融資（公司尚未正式證實細節）；10 年期美債殖利率 5.15%。
+
+（原始紀錄未保存連結）
+
+## 推論失效條件
+
+NVDA 法說明確重申客戶融資／合作夥伴承諾；CRWV 宣布新融資或大型合約；黃仁勳回任引發 AI 股全面軋空。
+
+## 結果與檢討
+
+尚未到期計分。
