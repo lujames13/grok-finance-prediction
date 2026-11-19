@@ -1,0 +1,21 @@
+{
+  "sources": [
+    {
+      "title": "CNBC: AMD stock dives on short-seller report of alleged China exposure",
+      "url": "https://www.cnbc.com/2026/11/19/amd-falls-on-short-seller-report-of-alleged-china-exposure.html"
+    },
+    {
+      "title": "Investing.com: Short seller Hunterbrook shorts AMD citing concerns over China exports",
+      "url": "https://www.investing.com/news/stock-market-news/short-seller-hunterbrook-shorts-amd-citing-concerns-over-china-exports-5039475"
+    },
+    {
+      "title": "Hunterbrook: Bank of AMD",
+      "url": "https://hntrbrk.com/investigations/bank-of-amd"
+    },
+    {
+      "title": "Taipei Times/Reuters: TSMC tightens China AI chip curbs",
+      "url": "https://www.taipeitimes.com/News/biz/archives/2026/11/20/2003868041"
+    }
+  ],
+  "numbers": "AMD close 11/19 489.19 (-7.72%), 11/18 530.14; SOX 9419.72 (-2.41%) close 11/19; AMD Singapore billing FY2025 US$4.28B (>10% sales); China+HK >20% revenue; AMD ~30x fwd P/E vs NVDA ~9x (Hunterbrook, as of 11/18)."
+}
