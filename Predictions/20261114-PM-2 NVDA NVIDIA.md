@@ -13,17 +13,17 @@ ref_price: 162.85
 benchmark: QQQ
 benchmark_ref: 679.89
 reasoning_type: mean-reversion
-status: open
-result:
-exit_price:
-benchmark_exit:
-stock_return:
-excess_return:
-scored_at:
+status: scored
+result: miss
+exit_price: 125.53
+benchmark_exit: 608.45
+stock_return: -22.92
+excess_return: -12.41
+scored_at: 2026-11-21 08:00
 tags:
 - prediction
 - conf/low
-- pred/open
+- pred/miss
 - market/us
 - dir/up
 - reason/mean-reversion
@@ -57,4 +57,10 @@ tags:
 
 ## 結果與檢討
 
-尚未到期計分。
+- 計分時間：2026-11-21 08:00
+- 出場價：125.53；基準出場：QQQ 608.45
+- 個股報酬：−22.92%；基準報酬：−10.51%
+- 超額報酬（excess return）：−12.41%
+- 結果：未中（miss）
+
+失誤。押「利空出盡、財報顯示需求還在」，但治理事件接連出第二隻靴子（NYT 報導、SEC 會計調查 accounting probe）。QQQ 同期 -10.5% 是大盤 beta，NVDA 多跌的 -12.4% 是個股治理風險；治理型利空不要在第一次反應後就判斷利空出盡。

@@ -13,17 +13,17 @@ ref_price: 295.77
 benchmark: QQQ
 benchmark_ref: 679.89
 reasoning_type: rotation
-status: open
-result:
-exit_price:
-benchmark_exit:
-stock_return:
-excess_return:
-scored_at:
+status: scored
+result: flat
+exit_price: 265.29
+benchmark_exit: 608.45
+stock_return: -10.31
+excess_return: 0.2
+scored_at: 2026-11-21 08:00
 tags:
 - prediction
 - conf/low-medium
-- pred/open
+- pred/flat
 - market/us
 - dir/up
 - reason/rotation
@@ -57,4 +57,10 @@ Anthropic IPO 延後，或定價明顯低於 70–78 美元區間；NVDA 財報�
 
 ## 結果與檢討
 
-尚未到期計分。
+- 計分時間：2026-11-21 08:00
+- 出場價：265.29；基準出場：QQQ 608.45
+- 個股報酬：−10.31%；基準報酬：−10.51%
+- 超額報酬（excess return）：0.20%
+- 結果：持平（flat）
+
+持平（排除）。TPU/Anthropic 股東的「替代方案受惠」論點沒有轉成相對強勢，只跟 QQQ 一起跌（超額 +0.2%）。系統性拋售時相關係數趨近 1，題材型的相對看多很難贏。

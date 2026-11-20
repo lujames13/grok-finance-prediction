@@ -13,17 +13,17 @@ ref_price: 53.13
 benchmark: QQQ
 benchmark_ref: 679.89
 reasoning_type: counterparty
-status: open
-result:
-exit_price:
-benchmark_exit:
-stock_return:
-excess_return:
-scored_at:
+status: scored
+result: hit
+exit_price: 39.51
+benchmark_exit: 608.45
+stock_return: -25.64
+excess_return: -15.13
+scored_at: 2026-11-21 08:00
 tags:
 - prediction
 - conf/low-medium
-- pred/open
+- pred/hit
 - market/us
 - dir/down
 - reason/counterparty
@@ -57,4 +57,10 @@ NVDA 法說明確重申客戶融資／合作夥伴承諾；CRWV 宣布新融資�
 
 ## 結果與檢討
 
-尚未到期計分。
+- 計分時間：2026-11-21 08:00
+- 出場價：39.51；基準出場：QQQ 608.45
+- 個股報酬：−25.64%；基準報酬：−10.51%
+- 超額報酬（excess return）：−15.13%
+- 結果：命中（hit）
+
+命中。NVDA 收緊融資承諾 → 最依賴融資的 neocloud 最脆弱，論點方向正確；但 QQQ 同期 -10.5%，CRWV 這種高槓桿高 beta 股在去槓桿盤本來就會放大跌幅，超額 -15% 有相當部分是 beta 放大而非純選股。

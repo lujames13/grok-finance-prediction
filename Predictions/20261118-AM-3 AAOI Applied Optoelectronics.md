@@ -13,17 +13,17 @@ ref_price: 45.22
 benchmark: QQQ
 benchmark_ref: 656.95
 reasoning_type: dilution
-status: open
-result:
-exit_price:
-benchmark_exit:
-stock_return:
-excess_return:
-scored_at:
+status: scored
+result: hit
+exit_price: 32.93
+benchmark_exit: 608.45
+stock_return: -27.18
+excess_return: -19.8
+scored_at: 2026-11-21 08:00
 tags:
 - prediction
 - conf/medium
-- pred/open
+- pred/hit
 - market/us
 - dir/down
 - reason/dilution
@@ -57,4 +57,10 @@ AAOI 宣布 ATM 增資（主辦為 Raymond James／Needham），11/17 盤後跌�
 
 ## 結果與檢討
 
-尚未到期計分。
+- 計分時間：2026-11-21 08:00
+- 出場價：32.93；基準出場：QQQ 608.45
+- 個股報酬：−27.18%；基準報酬：−7.38%
+- 超額報酬（excess return）：−19.80%
+- 結果：命中（hit）
+
+命中。ATM 增資（持續稀釋）加上小型光通訊股的高 beta，在 QQQ -7.4% 的環境裡跌 -27%。論點有效，但大部分超額來自高 beta 遇上空頭，不能全算選股能力。
