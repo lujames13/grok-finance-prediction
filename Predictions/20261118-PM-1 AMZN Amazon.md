@@ -13,17 +13,17 @@ ref_price: 257.89
 benchmark: QQQ
 benchmark_ref: 656.95
 reasoning_type: counterparty
-status: open
-result:
-exit_price:
-benchmark_exit:
-stock_return:
-excess_return:
-scored_at:
+status: scored
+result: hit
+exit_price: 252.29
+benchmark_exit: 638.1
+stock_return: -2.17
+excess_return: 0.7
+scored_at: 2026-11-25 08:00
 tags:
 - prediction
 - conf/low-medium
-- pred/open
+- pred/hit
 - market/us
 - dir/up
 - reason/counterparty
@@ -57,4 +57,10 @@ ANT 定價落在詢價區間或以下，或掛牌首日跌破發行價；市場�
 
 ## 結果與檢討
 
-尚未到期計分。
+- 計分時間：2026-11-25 08:00
+- 出場價：252.29；基準出場：QQQ 638.1
+- 個股報酬：−2.17%；基準報酬：−2.87%
+- 超額報酬（excess return）：0.70%
+- 結果：命中（hit）
+
+AMZN 5 日 -2.17% vs QQQ -2.87%，超額 +0.70% 勉強過 0.5% 門檻。原論點（Anthropic IPO 抬升 AWS 持股價值）反而失靈——Anthropic 11/24 跌破 IPO 價；命中主要來自 AMZN 在晶片主導的賣壓中 beta 低於 QQQ，屬「運氣型命中」，不應當作論點被驗證。

@@ -13,5 +13,6 @@
       "url": "https://www.cnbc.com/2026/11/19/stock-market-today-live-updates.html"
     }
   ],
-  "numbers": "2330 close 11/20 2000 (-4.76%); USD/TWD ~32.98 (11/20); parity = 2000*5/32.98 = US$303.2; TSM close 11/19 352.09 -> premium ~16.1% (was ~10.4% on 11/19). SOX 11/19 9419.72. Nasdaq-100 futures ~-1.1% (11/20 Asia hours)."
+  "numbers": "2330 close 11/20 2000 (-4.76%); USD/TWD ~32.98 (11/20); parity = 2000*5/32.98 = US$303.2; TSM close 11/19 352.09 -> premium ~16.1% (was ~10.4% on 11/19). SOX 11/19 9419.72. Nasdaq-100 futures ~-1.1% (11/20 Asia hours).",
+  "lesson": "TSM ADR -0.82% vs SOX -6.23%，超額 +5.41%，方向相反＝miss。ADR 溢價收斂確實有但很小；真正主導的是基準選擇：SOX 內含 MU、AMD 等高 beta 股，11/24 記憶體與 AMD 重挫，TSM 相對 SOX 是低 beta 防禦。教訓：在高波動下用 SOX 當基準，做空 TSM 等於押 TSM beta 高於半導體平均，這通常不成立。"
 }
