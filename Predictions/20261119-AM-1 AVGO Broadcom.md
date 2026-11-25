@@ -13,17 +13,17 @@ ref_price: 354.05
 benchmark: QQQ
 benchmark_ref: 659.51
 reasoning_type: rotation
-status: open
-result:
-exit_price:
-benchmark_exit:
-stock_return:
-excess_return:
-scored_at:
+status: scored
+result: miss
+exit_price: 300.86
+benchmark_exit: 633.93
+stock_return: -15.02
+excess_return: -11.14
+scored_at: 2026-11-26 08:00
 tags:
 - prediction
 - conf/low-medium
-- pred/open
+- pred/miss
 - market/us
 - dir/up
 - reason/rotation
@@ -57,4 +57,10 @@ ANT 掛牌跌破發行價；聯準會升息重新定價（會議紀錄偏鷹，W
 
 ## 結果與檢討
 
-尚未到期計分。
+- 計分時間：2026-11-26 08:00
+- 出場價：300.86；基準出場：QQQ 633.93
+- 個股報酬：−15.02%；基準報酬：−3.88%
+- 超額報酬（excess return）：−11.14%
+- 結果：未中（miss）
+
+AVGO -15.02% vs QQQ -3.88%，超額 -11.14%，不中。「資金從 NVDA 輪動到 ASIC」的假設被 11/20 起的 AI 硬體全面殺盤（含 SEC 調查 NVDA、記憶體與 ASIC 一起跌）蓋過；AVGO 是高 beta 的 AI 半導體，大盤 AI 情緒轉空時它跌得比 QQQ 多，輪動邏輯在恐慌期不成立。

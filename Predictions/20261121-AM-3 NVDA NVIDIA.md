@@ -13,17 +13,17 @@ ref_price: 125.53
 benchmark: SOX
 benchmark_ref: 8408.59
 reasoning_type: rotation
-status: open
-result:
-exit_price:
-benchmark_exit:
-stock_return:
-excess_return:
-scored_at:
+status: scored
+result: miss
+exit_price: 149.3
+benchmark_exit: 8774.86
+stock_return: 18.94
+excess_return: 14.58
+scored_at: 2026-11-26 08:00
 tags:
 - prediction
 - conf/low
-- pred/open
+- pred/miss
 - market/us
 - dir/down
 - reason/rotation
@@ -62,4 +62,10 @@ NVDA 或 SEC 正式澄清調查範圍有限、公司宣布正式 CEO 人選；�
 
 ## 結果與檢討
 
-尚未到期計分。
+- 計分時間：2026-11-26 08:00
+- 出場價：149.3；基準出場：SOX 8,774.86
+- 個股報酬：18.94%；基準報酬：4.36%
+- 超額報酬（excess return）：14.58%
+- 結果：未中（miss）
+
+NVDA +18.94% vs SOX +4.36%，超額 +14.58%，不中。押 SEC 調查＋CEO 空缺會讓 NVDA 續弱，結果 11/23 董事會讓黃仁勳回任，單日 +31%，個股特有風險（idiosyncratic risk）反向消除。教訓：已連跌 7 週、空單擁擠時，一個治理利多就能引爆空單回補（short squeeze），偏空個股要把這種跳空風險算進信心。
