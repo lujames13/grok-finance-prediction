@@ -13,17 +13,17 @@ ref_price: 489.19
 benchmark: SOX
 benchmark_ref: 9419.72
 reasoning_type: policy
-status: open
-result:
-exit_price:
-benchmark_exit:
-stock_return:
-excess_return:
-scored_at:
+status: scored
+result: hit
+exit_price: 424.54
+benchmark_exit: 9186.71
+stock_return: -13.22
+excess_return: -10.74
+scored_at: 2026-11-28 08:00
 tags:
 - prediction
 - conf/low-medium
-- pred/open
+- pred/hit
 - market/us
 - dir/down
 - reason/policy
@@ -62,4 +62,10 @@ AMD 提出具體反駁證據或 Commerce 表態無違規；大客戶（OpenAI/Me
 
 ## 結果與檢討
 
-尚未到期計分。
+- 計分時間：2026-11-28 08:00
+- 出場價：424.54；基準出場：SOX 9,186.71
+- 個股報酬：−13.22%；基準報酬：−2.47%
+- 超額報酬（excess return）：−10.74%
+- 結果：命中（hit）
+
+AMD -13.22% 對 SOX -2.47%，超額 -10.74% 記 hit。大盤（beta）只貢獻約 -2.5%，其餘是放空報告（Hunterbrook）揭露的中國／新加坡營收疑慮持續發酵、加上東南亞出口管制新規，個股特有利空（idiosyncratic）主導；11/27 費半反彈 +4.7% 時 AMD 也只 +4.6%，沒能補回。

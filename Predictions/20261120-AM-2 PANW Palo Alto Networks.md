@@ -13,17 +13,17 @@ ref_price: 361.73
 benchmark: QQQ
 benchmark_ref: 645.04
 reasoning_type: rotation
-status: open
-result:
-exit_price:
-benchmark_exit:
-stock_return:
-excess_return:
-scored_at:
+status: scored
+result: flat
+exit_price: 366.76
+benchmark_exit: 650.99
+stock_return: 1.39
+excess_return: 0.47
+scored_at: 2026-11-28 08:00
 tags:
 - prediction
 - conf/low-medium
-- pred/open
+- pred/flat
 - market/us
 - dir/up
 - reason/rotation
@@ -60,4 +60,10 @@ PANW FQ1 營收 +39%、上修全年指引、併購 Applied Compute US$4.5B（Reu
 
 ## 結果與檢討
 
-尚未到期計分。
+- 計分時間：2026-11-28 08:00
+- 出場價：366.76；基準出場：QQQ 650.99
+- 個股報酬：1.39%；基準報酬：0.92%
+- 超額報酬（excess return）：0.47%
+- 結果：持平（flat）
+
+PANW +1.39% 對 QQQ +0.92%，超額 +0.47% 記 flat。財報上修後的動能確實讓它小贏大盤，但幅度太小；這段期間 QQQ 先跌後彈，PANW 主要跟著大盤（beta）走，財報利多大多已在 11/18–19 兩天反映完。
